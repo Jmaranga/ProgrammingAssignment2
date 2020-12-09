@@ -103,3 +103,35 @@ In order to complete this assignment, you must do the following:
 ### Grading
 
 This assignment will be graded via peer assessment.
+
+source("makeCacheMatrix.R")
+> xmatrix <- makeCacheMatrix(matrix(1:16, nrow = 4, ncol = 4))
+> xmatrix$get()
+     [,1] [,2] [,3] [,4]
+[1,]    1    5    9   13
+[2,]    2    6   10   14
+[3,]    3    7   11   15
+[4,]    4    8   12   16
+> xmatrix$getInverse()
+NULL
+> xmatrix <- makeCacheMatrix(matrix(1:4, nrow = 2, ncol = 2))
+> xmatrix$get()
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+> xmatrix$getInverse()
+NULL
+> cacheSolve(xmatrix)
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> cacheSolve(xmatrix)
+getting cached data
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> xmatrix$getInverse()
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+> 
